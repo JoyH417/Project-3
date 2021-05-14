@@ -9,17 +9,14 @@
 
 body{
     background-color: lightgray;
-    display: block;
     line-height: 1.5;
     font-family: 'Merriweather', serif;
 }
 
 .container{
     display: flex;
-    justify-content: space-around;
     flex-flow: column wrap;
-    margin: 20px;
-    padding: 20px;
+    justify-content: space-around;
     min-height: 100vh;
     border-top: 5px double black;
 }
@@ -29,6 +26,8 @@ body{
  .select{
     background-color: lightskyblue;
     border-radius: 5px;
+    width: 100%;
+    display: block;
 
 }
 
@@ -53,8 +52,6 @@ h1{
 
 header h2{
     text-align: center;
-    padding: 10px;
-    margin: 10px;
     font-size: 30px;
     font-weight: bold;
 
@@ -66,7 +63,6 @@ header h2{
     margin: 10px;
     padding: 10px;
     text-align: center;
-
 }
 
 legend{
@@ -75,9 +71,9 @@ legend{
 }
 
 #topics{
-    padding-top: 20px;
     border-radius: 5px;
-    width: 75%;
+    width: 100%;
+    padding: 20px;
 
 }
 
@@ -91,7 +87,7 @@ button{
     background-color: blue;
     color: cornsilk;
     border-radius: 5px;
-    width: 50%;
+    width: 100%;
     align-self: center;
 }
 
@@ -119,12 +115,55 @@ footer{
 @media(min-width:768px) {
 
 
+    .main{
+        display: flex;
+        flex-direction: row;
+        
+
+    }
+
+
+    header p {
+        margin: 10px;
+        padding: 10px;
+        text-align: center;
+    }
+
+    .bel{
+        flex-basis: 25%;
+        height:50px;
+        margin: auto 0;
+
+    }
+
+    .put,
+    .select{
+        flex-grow: 1;
+        flex-basis: 75%;
+    }
+
     form{
-        width: 50%;
-        display: block;
+        max-width: 80%;
         margin-left: auto;
         margin-right: auto;
     }
+
+
+    #zipcode{
+        max-width: 25%;
     
+
+}
+
+#topics{
+    width: 100%;
+    padding: 20px;
+        
+}
+
+button{
+    width: 100%;
+    padding: 10px;
+}
 
 }
